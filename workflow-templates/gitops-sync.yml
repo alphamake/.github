@@ -17,5 +17,5 @@ jobs:
       config_path: deploy/values.yaml
       dockerfile: Dockerfile
       ddl_path: db/ddl.sql
-      openbao_url: https://openbao.qiuhanming.com
+      openbao_url: https://openbao.qiuhanming.com:8443
     secrets: inherit
