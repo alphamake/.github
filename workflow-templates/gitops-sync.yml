@@ -10,10 +10,12 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write
     uses: alphamake/automation/.github/workflows/app-gitops-sync.yml@main
     with:
       app_name: ${{ github.event.repository.name }}
       config_path: deploy/values.yaml
       dockerfile: Dockerfile
       ddl_path: db/ddl.sql
+      openbao_url: https://openbao.qiuhanming.com
     secrets: inherit
