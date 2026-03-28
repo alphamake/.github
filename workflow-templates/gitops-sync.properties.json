@@ -1,0 +1,13 @@
+{
+  "name": "GitOps Sync",
+  "description": "Build the application image, render GitOps manifests, and commit them to the shared GitOps repository via alphamake/automation.",
+  "iconName": "docker",
+  "categories": [
+    "Deployment",
+    "Continuous integration"
+  ],
+  "filePatterns": [
+    "^Dockerfile$",
+    "^deploy/values\\.yaml$"
+  ]
+}

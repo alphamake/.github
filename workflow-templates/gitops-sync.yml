@@ -1,0 +1,19 @@
+name: gitops-sync
+
+on:
+  push:
+    branches:
+    - '**'
+
+jobs:
+  build-and-sync:
+    permissions:
+      contents: read
+      packages: write
+    uses: alphamake/automation/.github/workflows/app-gitops-sync.yml@main
+    with:
+      app_name: ${{ github.event.repository.name }}
+      config_path: deploy/values.yaml
+      dockerfile: Dockerfile
+      ddl_path: db/ddl.sql
+    secrets: inherit
