@@ -15,6 +15,5 @@ jobs:
       app_name: ${{ github.event.repository.name }}
       config_path: deploy/values.yaml
       dockerfile: Dockerfile
-      automation_app_id: ${{ vars.AUTOMATION_APP_ID }}
       ddl_path: db/ddl.sql
     secrets: inherit
